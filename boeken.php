@@ -1,5 +1,6 @@
 <?php
 // connectie met database hier
+
 $db = "bibliotheek"; // naam van database
 $host = "localhost";
 $username = "root";
@@ -8,12 +9,11 @@ $password = "";
 try {
   $conn = new PDO("mysql:host=$host;dbname=$db", $username, $password);
   // set the PDO error mode to exception
-  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODbE_EXCEPTION);
-  echo "Connected successfully";
+  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  echo "Connected successfully"; // kan later weg als er iedereen connectie heeft
 } catch(PDOException $e) {
   echo "Connection failed: " . $e->getMessage();
 }
-
 ?>
 
 <!DOCTYPE html>
