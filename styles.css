@@ -19,7 +19,7 @@ body {
     line-height: 1.6;
 }
 
-/* --- ELEGANT NAVY HEADER --- */
+/* HEADER */
 header {
     background-color: var(--navy-deep);
     color: var(--white);
@@ -27,11 +27,11 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 4px solid var(--gold-accent); /* Subtle gold stripe */
+    border-bottom: 4px solid var(--gold-accent);
 }
 
 header h2 {
-    font-family: 'Playfair Display', serif; /* Serif font for a library feel */
+    font-family: 'Playfair Display', serif;
     font-size: 1.4rem;
     letter-spacing: 1px;
 }
@@ -59,7 +59,7 @@ header h2 {
     letter-spacing: 3px;
 }
 
-/* --- BUTTONS SECTION --- */
+/* BUTTONS SECTION */
 .Homepage {
     width: 90%;
     max-width: 1100px;
@@ -87,13 +87,13 @@ button {
     padding: 18px 35px;
     font-size: 1rem;
     font-weight: 600;
-    border-radius: 4px; /* Squared edges for a more classic look */
+    border-radius: 4px;
     cursor: pointer;
     transition: all 0.4s ease;
     min-width: 220px;
 }
 
-/* Experiment: The Gold Ghost Button */
+
 button:nth-child(2) {
     background-color: transparent;
     color: var(--navy-deep);
@@ -108,7 +108,7 @@ button:hover {
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
-/* --- STATS SECTION --- */
+/* STATS SECTION */
 #Bottom_text {
     display: flex;
     justify-content: center;
