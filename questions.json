@@ -1,0 +1,57 @@
+{
+  "questions": [
+    {
+      "question": "What genre calls to you?",
+      "subtitle": "Choose the world you want to explore",
+      "options": [
+        { "icon": "📖", "label": "Fiction", "value": "fiction" },
+        { "icon": "📚", "label": "Non-Fiction", "value": "nonfiction" },
+        { "icon": "🚀", "label": "Sci-Fi", "value": "scifi" },
+        { "icon": "🔍", "label": "Mystery", "value": "mystery" }
+      ]
+    },
+    {
+      "question": "What mood are you in?",
+      "subtitle": "How do you want to feel while reading?",
+      "options": [
+        { "icon": "☀️", "label": "Uplifting", "value": "happy" },
+        { "icon": "💭", "label": "Thoughtful", "value": "thinking" },
+        { "icon": "⚡", "label": "Adventurous", "value": "adventure" }
+      ]
+    },
+    {
+      "question": "How long should it be?",
+      "subtitle": "Pick your commitment level",
+      "options": [
+        { "icon": "☕", "label": "Short Story", "value": "short" },
+        { "icon": "🧱", "label": "Epic Saga", "value": "long" }
+      ]
+    }
+  ],
+  "books": {
+    "fiction": {
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "desc": "A classic tale of the Jazz Age, exploring themes of decadence and idealism.",
+      "color": "linear-gradient(135deg, #f6d365 0%, #fda085 100%)"
+    },
+    "nonfiction": {
+      "title": "Sapiens",
+      "author": "Yuval Noah Harari",
+      "desc": "A brief history of humankind, exploring how biology and history define us.",
+      "color": "linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%)"
+    },
+    "scifi": {
+      "title": "Dune",
+      "author": "Frank Herbert",
+      "desc": "An epic science fiction saga set on the desert planet Arrakis.",
+      "color": "linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%)"
+    },
+    "mystery": {
+      "title": "The Silent Patient",
+      "author": "Alex Michaelides",
+      "desc": "A shocking psychological thriller about a woman's act of violence against her husband.",
+      "color": "linear-gradient(135deg, #cfd9df 0%, #e2ebf0 100%)"
+    }
+  }
+}
