@@ -8,16 +8,22 @@
 </head>
 <body>
     <h1>Welk boek past bij jou?</h1>
-    <div>
-        <h1>genres</h1>
-        <button onclick="Loadbook1()">horror</button>
-        <button onclick="Loadbook2()">romantiek</button>
-        <button onclick="Loadbook3()">science fiction</button>
-        <button onclick="Loadbook4()">fantasy</button>
-    </div>
-    <div id="image">
-        <h1 id="book-title"></h1>
+    <div class="quiz_box">
+        <header>
+            <div class="logo">
+                <span class="book_logo"></span> Vind jouw boek!
+            </div>
+        </header>
+
+        <div class="Progressie_balk" id="ProgressieTrack">
+            <div class="progress_vullen" id="ProgressBar" style="width: 33%;"></div>
+        </div>
+
+        <main id="Quiz_content">
+            <h1 id="questionTekst">Laden...</h1>
+            <p class="subtitle" id="subtitleTekst">Laden...</p>
+        </main>
     </div>
     <script src="script.js"></script>        
-    </body>
+</body>
 </html>
