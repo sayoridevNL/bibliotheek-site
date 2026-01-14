@@ -6,26 +6,54 @@
       "options": [
         { "icon": "📖", "label": "Fiction", "value": "fiction" },
         { "icon": "📚", "label": "Non-Fiction", "value": "nonfiction" },
-        { "icon": "🚀", "label": "Sci-Fi", "value": "scifi" },
-        { "icon": "🔍", "label": "Mystery", "value": "mystery" }
-      ]
-    },
-    {
-      "question": "What mood are you in?",
-      "subtitle": "How do you want to feel while reading?",
-      "options": [
-        { "icon": "☀️", "label": "Uplifting", "value": "happy" },
-        { "icon": "💭", "label": "Thoughtful", "value": "thinking" },
-        { "icon": "⚡", "label": "Adventurous", "value": "adventure" }
+        { "icon": "👻", "label": "Horror", "value": "horror" },
+        { "icon": "🎨", "label": "Graphic Novels", "value": "graphicnovel" },
+        { "icon": "🕵️‍♂️", "label": "Mystery", "value": "mystery" },
+        { "icon": "❤️", "label": "Romance", "value": "romance" },
+        { "icon": "😂", "label": "Comedy", "value": "comedy" },
+        { "icon": "🪶", "label": "Poetry", "value": "poetry" },
+        { "icon": "🐉", "label": "Fantasty", "value": "fantasy" },
+        { "icon": "🚀", "label": "Science Fiction", "value": "sciencefiction" }
+
       ]
     },
     {
       "question": "How long should it be?",
-      "subtitle": "Pick your commitment level",
+      "subtitle": "Choose the most comfortable read",
       "options": [
-        { "icon": "☕", "label": "Short Story", "value": "short" },
-        { "icon": "🧱", "label": "Epic Saga", "value": "long" }
+        { "icon": "📘", "label": "Short Read (~150 Pages)", "value": "shortread" },
+        { "icon": "📗", "label": "Medium Read (~250 Pages)", "value": "mediumread" },
+        { "icon": "📕", "label": "Long Read (~450 Pages)", "value": "longread" },
+        { "icon": "📚", "label": "Novel (~700+ Pages)", "value": "novel" }
       ]
+    },
+    {
+      "question": "How old are you?",
+      "subtitle": "Choose one that fits best with you",
+      "options": [
+        { "icon": "🧒", "label": "Kids (5-12 Years)", "value": "kids" },
+        { "icon": "🧑‍🎓", "label": "Teens (13-17 Years)", "value": "teens" },
+        { "icon": "🧑", "label": "Young Adults (18-25 Years)", "value": "youngadults" },
+        { "icon": "🧔", "label": "Adults (25+ Years)", "value": "adults" }
+
+      ]
+    },
+    {
+      "question": "What theme interests you?",
+      "subtitle": "Choose something that resonates with you",
+      "options": [
+        { "icon": "🗺️", "label": "Adventure", "value": "adventure" },
+        { "icon": "🤝", "label": "Friendship", "value": "friendship" },
+        { "icon": "❤️", "label": "Love", "value": "love" },
+        { "icon": "🤔", "label": "Philosophy", "value": "philosophy" },
+        { "icon": "👨‍👩‍👧‍👦", "label": "Family", "value": "family" },
+        { "icon": "🔬", "label": "Science", "value": "science" },
+        { "icon": "🌱", "label": "Self-improvement", "value": "selfimprovement" },
+        { "icon": "😄", "label": "Humor", "value": "humor" },
+        { "icon": "🕵️", "label": "Mystery", "value": "mystery" },
+        { "icon": "🎭", "label": "Tragedy", "value": "tragedy" }
+      ]
+
     }
   ],
   "books": {
