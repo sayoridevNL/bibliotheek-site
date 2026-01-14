@@ -1,0 +1,139 @@
+:root {
+    --bg-paper: #f9f9f3;      /* 60% - Main Background */
+    --navy-deep: #1f3a5f;     /* 30% - Headers/Structure */
+    --gold-accent: #d3a574;   /* 10% - Call to Action */
+    --text-main: #2a2a2a;
+    --white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-paper);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    background-color: var(--navy-deep);
+    color: var(--white);
+    padding: 1rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 4px solid var(--gold-accent);
+}
+
+header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+}
+
+/* --- HERO SECTION --- */
+#Title_Homepage {
+    text-align: center;
+    padding: 80px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#Title_Homepage h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    color: var(--navy-deep);
+    margin-bottom: 15px;
+}
+
+#Title_Homepage h5 {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: var(--text-main);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+/* BUTTONS SECTION */
+.Homepage {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+#Knoppen_Homepage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+#Knopjes_titel {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+button {
+    background-color: var(--navy-deep);
+    color: var(--white);
+    border: 2px solid var(--navy-deep);
+    padding: 18px 35px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    min-width: 220px;
+}
+
+
+button:nth-child(2) {
+    background-color: transparent;
+    color: var(--navy-deep);
+    border: 2px solid var(--gold-accent);
+}
+
+button:hover {
+    background-color: var(--gold-accent);
+    border-color: var(--gold-accent);
+    color: var(--white);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* STATS SECTION */
+#Bottom_text {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 80px;
+    padding-bottom: 50px;
+}
+
+.Bottom_text {
+    background-color: var(--white);
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    border-top: 3px solid var(--gold-accent);
+    text-align: center;
+}
+
+.Bottom_text p {
+    font-weight: 600;
+    color: var(--navy-deep);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #Title_Homepage h1 { font-size: 2.2rem; }
+    #Knopjes_titel { flex-direction: column; width: 100%; }
+    button { width: 100%; }
+}
