@@ -32,6 +32,12 @@ try {
         echo "<div class='boeken-container'>";
         
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        // als er geen resultaten zijn
+        if(count($result) === 0) {
+          echo "<p>Geen boeken gevonden.</p>";
+        }
+        
         foreach ($result as $row) {
           echo "<div class='boek'>";
           echo "<a href='boek.php?id=" . $row['id'] . "' class='boek-link'>";
