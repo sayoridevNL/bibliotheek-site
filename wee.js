@@ -1,24 +1,76 @@
 document.addEventListener('DOMContentLoaded', () => {
-    let star1 = document.getElementById("star1");
-    let star2 = document.getElementById("star2");
-    let star3 = document.getElementById("star3");
-    let star4 = document.getElementById("star4");
-    let star5 = document.getElementById("star5");
+    // Elements
+    const openRatingBtn = document.getElementById("openRatingBtn");
+    const modal = document.getElementById("feedbackModal");
+    const cancelBtn = document.getElementById("cancelBtn");
+    const submitBtn = document.getElementById("submitFeedback");
+    const feedbackText = document.getElementById("feedbackText");
 
-    function setstar(rating) {
-        let stars = [star1, star2, star3, star4, star5];
-        for (let i = 0; i < stars.length; i++) {
-            if (i < rating) {
-                stars[i].style.color = "#FFD700"; // Gold color
-            } else {
-                stars[i].style.color = "#e0e0e0"; // Light gray
-            }
-        }
+    const stars = [
+        document.getElementById("star1"),
+        document.getElementById("star2"),
+        document.getElementById("star3"),
+        document.getElementById("star4"),
+        document.getElementById("star5")
+    ];
+
+    let currentRating = 0;
+
+    // Open Modal
+    openRatingBtn.addEventListener("click", () => {
+        modal.style.display = "flex";
+        resetStars();
+    });
+
+    // Close Modal
+    function closeModal() {
+        modal.style.display = "none";
+        feedbackText.value = "";
+        currentRating = 0;
     }
 
-    star1.addEventListener("click", function() { setstar(1); });
-    star2.addEventListener("click", function() { setstar(2); });
-    star3.addEventListener("click", function() { setstar(3); });
-    star4.addEventListener("click", function() { setstar(4); });
-    star5.addEventListener("click", function() { setstar(5); });
+    // Star Click Logic (inside popup)
+    function setStarRating(rating) {
+        currentRating = rating;
+        stars.forEach((star, index) => {
+            if (index < rating) {
+                star.style.color = "#FFD700"; // Gold
+            } else {
+                star.style.color = "#e0e0e0"; // Gray
+            }
+        });
+    }
+
+    function resetStars() {
+        stars.forEach(star => star.style.color = "#e0e0e0");
+    }
+
+    // Assign events to stars
+    stars.forEach((star, index) => {
+        star.addEventListener("click", () => setStarRating(index + 1));
+    });
+
+    // Button Actions
+    cancelBtn.addEventListener("click", closeModal);
+
+    submitBtn.addEventListener("click", () => {
+        if (currentRating === 0) {
+            alert("Please select a star rating!");
+            return;
+        }
+
+        const data = {
+            rating: currentRating,
+            feedback: feedbackText.value
+        };
+
+        console.log("Feedback Submitted:", data);
+        alert(`Thank you! You rated this ${currentRating} stars.`);
+        closeModal();
+    });
+
+    // Close on background click
+    window.addEventListener("click", (e) => {
+        if (e.target === modal) closeModal();
+    });
 });

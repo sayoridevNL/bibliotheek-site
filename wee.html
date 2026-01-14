@@ -47,14 +47,10 @@
                 </div>
 
                 <div id="rating">
-                    <p class="rate-label">Rate this book:</p>
-                    <div class="stars-container">
-                        <button class="star" id="star1">★</button>
-                        <button class="star" id="star2">★</button>
-                        <button class="star" id="star3">★</button>
-                        <button class="star" id="star4">★</button>
-                        <button class="star" id="star5">★</button>
-                    </div>
+                    <p class="rate-label">Enjoyed the match?</p>
+                    <button class="btn btn-secondary" id="openRatingBtn" style="width: auto; padding: 8px 16px; font-size: 0.85rem;">
+                        ⭐ Rate & Review
+                    </button>
                 </div>
 
             </div>
@@ -66,6 +62,27 @@
             <button class="btn btn-tertiary">🏠 Back to Home</button>
         </div>
 
+    </div>
+
+    <div id="feedbackModal" class="modal-overlay">
+        <div class="modal-content">
+            <h3>How was this book?</h3>
+            
+            <div class="stars-container" style="margin-bottom: 15px;">
+                <button class="star" id="star1">★</button>
+                <button class="star" id="star2">★</button>
+                <button class="star" id="star3">★</button>
+                <button class="star" id="star4">★</button>
+                <button class="star" id="star5">★</button>
+            </div>
+
+            <textarea id="feedbackText" placeholder="Share your feedback (optional)..."></textarea>
+            
+            <div class="modal-actions">
+                <button id="cancelBtn" class="btn btn-tertiary">Cancel</button>
+                <button id="submitFeedback" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
     </div>
 
     <script src="wee.js"></script>
