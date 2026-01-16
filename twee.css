@@ -174,11 +174,14 @@ h1 {
     transition: color 0.3s ease;
 }
 
+/* --- UPDATED: CARD LABEL FONT --- */
 .label { 
-    font-size: 1.1rem; 
-    font-weight: 600; 
+    font-family: 'Playfair Display', serif; /* Changed to match H1 */
+    font-size: 1.25rem; /* Slightly larger for readability */
+    font-weight: 700; 
     color: var(--navy-deep);
     transition: color 0.3s ease;
+    letter-spacing: 0.5px;
 }
 
 /* --- RESULT SCREEN --- */
