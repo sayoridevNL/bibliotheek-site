@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --bg-paper: #f9f9f3;       
+    --navy-deep: #1f3a5f;      
+    --gold-accent: #d3a574;    
+    --text-main: #2a2a2a;      
+    --white: #ffffff;          
+    --gray-light: #e0e0e0; 
+    --subtle-border: rgba(211, 165, 116, 0.3);
+}
+
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-paper);
+    color: var(--text-main);
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+    line-height: 1.6;
+}
+
+.main-container {
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header Section */
+.header-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.pill-badge {
+    display: inline-block;
+    background-color: var(--gold-accent);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: var(--navy-deep);
+    font-weight: 700;
+}
+
+/* Card Styling */
+.book-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border-top: 4px solid var(--gold-accent);
+    display: flex;
+    gap: 40px;
+    width: 100%;
+    margin-bottom: 40px;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Subtle Border Animation for the card */
+.book-card:hover {
+    border-color: var(--subtle-border);
+    box-shadow: 0 4px 15px var(--subtle-border);
+}
+
+/* Left Side: Cover */
+.cover-section {
+    flex-shrink: 0;
+    width: 240px;
+}
+
+.cover-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Right Side: Info */
+.info-section {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.book-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    color: var(--navy-deep);
+    margin-bottom: 5px;
+}
+
+.author {
+    color: var(--gold-accent);
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.description {
+    color: var(--text-main);
+    margin-bottom: 25px;
+    font-weight: 300;
+}
+
+/* Tags and Themes */
+.meta-tags {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.tag {
+    background-color: var(--bg-paper);
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    color: var(--navy-deep);
+    font-weight: 600;
+    border: 1px solid var(--gray-light);
+}
+
+.themes {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.theme-label {
+    font-weight: 600;
+    color: #888;
+    font-size: 14px;
+}
+
+.theme-pill {
+    background-color: var(--navy-deep);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* Rating Section Styling */
+#rating {
+    margin-top: auto;
+    border-top: 1px solid var(--gray-light);
+    padding-top: 15px;
+}
+
+.rate-label {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+/* Bottom Buttons */
+.action-buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn {
+    padding: 14px 28px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.btn-primary {
+    background-color: var(--navy-deep);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--gold-accent);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--navy-deep);
+    border-color: var(--navy-deep);
+}
+
+.btn-tertiary {
+    background-color: transparent;
+    color: var(--gold-accent);
+    border-color: var(--gold-accent);
+}
+
+/* Modal Overlay */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(31, 58, 95, 0.8);
+    backdrop-filter: blur(5px);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 420px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    text-align: center;
+    border-top: 4px solid var(--gold-accent);
+}
+
+#feedbackText {
+    width: 100%;
+    height: 120px;
+    margin: 15px 0;
+    padding: 12px;
+    border: 1px solid var(--gray-light);
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    resize: none;
+    background-color: var(--bg-paper);
+}
+
+.star {
+    font-size: 2.5rem;
+    color: var(--gray-light);
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.star:hover {
+    color: var(--gold-accent);
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .book-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 25px;
+    }
+    
+    .cover-section {
+        width: 180px;
+    }
+
+    .info-section {
+        align-items: center;
+    }
+    
+    .author, .meta-tags, .themes {
+        justify-content: center;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}

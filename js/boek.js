@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Elements
     const openRatingBtn = document.getElementById("openRatingBtn");
     const modal = document.getElementById("feedbackModal");
     const cancelBtn = document.getElementById("cancelBtn");
@@ -16,27 +15,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let currentRating = 0;
 
-    // Open Modal
     openRatingBtn.addEventListener("click", () => {
         modal.style.display = "flex";
         resetStars();
     });
 
-    // Close Modal
     function closeModal() {
         modal.style.display = "none";
         feedbackText.value = "";
         currentRating = 0;
     }
 
-    // Star Click Logic (inside popup)
     function setStarRating(rating) {
         currentRating = rating;
         stars.forEach((star, index) => {
             if (index < rating) {
-                star.style.color = "#FFD700"; // Gold
+                star.style.color = "#FFD700";
             } else {
-                star.style.color = "#e0e0e0"; // Gray
+                star.style.color = "#e0e0e0";
             }
         });
     }
@@ -45,12 +41,10 @@ document.addEventListener('DOMContentLoaded', () => {
         stars.forEach(star => star.style.color = "#e0e0e0");
     }
 
-    // Assign events to stars
     stars.forEach((star, index) => {
         star.addEventListener("click", () => setStarRating(index + 1));
     });
 
-    // Button Actions
     cancelBtn.addEventListener("click", closeModal);
 
     submitBtn.addEventListener("click", () => {
@@ -69,7 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
         closeModal();
     });
 
-    // Close on background click
     window.addEventListener("click", (e) => {
         if (e.target === modal) closeModal();
     });
