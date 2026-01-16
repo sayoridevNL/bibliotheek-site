@@ -1,61 +1,193 @@
+/* --- FONTS --- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    /* --- COLOR PALETTE --- */
+    --bg-paper: #f9f9f3;
+    --navy-deep: #1f3a5f;
+    --gold-accent: #d3a574;
+    --text-main: #2a2a2a;
+    --white: #ffffff;
+    --gray-border: #e0e0e0;
+    
+    /* NEW: Centralize width to keep things consistent */
+    --container-width: 1400px; 
+}
 
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  background-color: #f8f5f0; 
-  color: #1f2d3d;
-  padding: 32px;
+    background-color: var(--bg-paper);
+    color: var(--text-main);
+    font-family: 'Poppins', sans-serif;
+    padding: 20px; /* Reduced from 40px to save edge space */
+    line-height: 1.6;
+    min-height: 100vh;
 }
 
-/* Header section */
+/* --- UTILITY CLASS FOR ALIGNMENT --- */
+/* Add this class to your Header, Search, Filters, and Grid in HTML */
+.container-width {
+    max-width: var(--container-width);
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+/* --- HEADER --- */
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px; /* Reduced from 40px */
+    
+    /* Inherit width control */
+    max-width: var(--container-width);
+    margin-left: auto;
+    margin-right: auto;
+    
+    border-bottom: 3px solid var(--gold-accent);
+    padding-bottom: 15px; /* Slightly tighter */
 }
 
 header h1 {
-  font-size: 32px;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--navy-deep);
+    letter-spacing: 1px;
 }
 
 header .home-btn {
-  background-color: #e4decf;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
+    background-color: transparent;
+    color: var(--navy-deep);
+    border: 2px solid var(--navy-deep);
+    padding: 10px 25px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
 }
 
-/* Search bar */
+header .home-btn:hover {
+    background-color: var(--navy-deep);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* --- SEARCH BAR --- */
 .search-bar {
-  margin-bottom: 24px;
+    margin-bottom: 20px; /* Reduced from 30px */
+    max-width: var(--container-width);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .search-bar input {
-  width: 100%;
-  padding: 12px 16px;
-  border-radius: 10px;
-  border: 1px solid #ccc;
-  font-size: 16px;
+    width: 100%;
+    padding: 18px 25px;
+    border-radius: 4px;
+    border: 1px solid var(--gray-border);
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--white);
+    color: var(--navy-deep);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
 }
 
-/* Filters */
+.search-bar input:focus {
+    outline: none;
+    border-color: var(--gold-accent);
+    box-shadow: 0 0 0 3px rgba(211, 165, 116, 0.2);
+}
+
+.search-bar input::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+/* --- FILTERS --- */
 .filters {
-  display: flex;
-  gap: 16px;
-  margin-bottom: 32px;
+    display: flex;
+    gap: 15px; /* Tighter gap */
+    margin-bottom: 30px; /* Reduced from 40px */
+    max-width: var(--container-width);
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
 }
 
 .filters select {
-  padding: 8px 16px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 16px;
+    padding: 12px 20px;
+    border-radius: 4px;
+    border: 1px solid var(--navy-deep);
+    font-size: 0.95rem;
+    font-family: 'Poppins', sans-serif;
+    color: var(--navy-deep);
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    /* Allow filters to grow and fill empty space if needed */
+    flex-grow: 1; 
+    max-width: 300px; /* But prevent them from getting huge */
+    min-width: 180px;
+}
+
+.filters select:hover {
+    background-color: var(--gold-accent);
+    color: var(--white);
+    border-color: var(--gold-accent);
+}
+
+.filters select:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(31, 58, 95, 0.2);
+}
+
+/* --- BOOK GRID --- */
+.book-grid {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    display: grid;
+    
+    /* Adjusted minmax: 
+       240px ensures cards aren't too skinny. 
+       1fr ensures they expand to fill the empty space on the right. */
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    
+    gap: 20px; /* Reduced gap from 30px for a fuller look */
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    body { padding: 15px; }
+    
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    header .home-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .filters {
+        flex-direction: column;
+    }
+
+    .filters select {
+        width: 100%;
+        max-width: 100%; /* Remove constraint on mobile */
+    }
 }
