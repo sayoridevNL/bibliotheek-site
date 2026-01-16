@@ -1,16 +1,11 @@
-/* --- 1. FONTS EN VARIABELEN (Gekopieerd van je Homepage) --- */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;600&display=swap');
-
 :root {
-    --bg-paper: #f9f9f3;      /* De crème achtergrond van je home */
-    --navy-deep: #1f3a5f;     /* Het donkerblauw */
-    --gold-accent: #d3a574;   /* Het goud voor accenten */
+    --bg-paper: #f9f9f3;      /* 60% - Main Background */
+    --navy-deep: #1f3a5f;     /* 30% - Headers/Structure */
+    --gold-accent: #d3a574;   /* 10% - Call to Action */
     --text-main: #2a2a2a;
     --white: #ffffff;
-    --container-width: 1400px; 
 }
 
-/* --- 2. BASIS RESET --- */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -22,10 +17,9 @@ body {
     background-color: var(--bg-paper);
     color: var(--text-main);
     line-height: 1.6;
-    padding: 0; /* Verwijderd zodat de header over de volle breedte gaat zoals op de home */
 }
 
-/* --- 3. HEADER (Zelfde als op je Homepage) --- */
+/* HEADER */
 header {
     background-color: var(--navy-deep);
     color: var(--white);
@@ -34,160 +28,112 @@ header {
     justify-content: space-between;
     align-items: center;
     border-bottom: 4px solid var(--gold-accent);
-    margin-bottom: 40px;
 }
 
-header h1 {
+header h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 1.4rem; /* Kleiner gemaakt om te matchen met je h2 op home */
+    font-size: 1.4rem;
     letter-spacing: 1px;
-    color: var(--white);
 }
 
-/* De Home-knop in de header */
-header .home-btn {
-    background-color: transparent;
-    color: var(--white);
-    border: 2px solid var(--gold-accent);
-    padding: 8px 20px;
-    font-size: 0.9rem;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.4s ease;
+/* --- HERO SECTION --- */
+#Title_Homepage {
+    text-align: center;
+    padding: 80px 20px;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-header .home-btn:hover {
-    background-color: var(--gold-accent);
-    transform: translateY(-2px);
-}
-
-/* --- 4. ZOEKBALK & FILTERS --- */
-.search-bar, .filters {
-    width: 90%;
-    max-width: var(--container-width);
-    margin: 0 auto 20px auto;
-}
-
-.search-bar input {
-    width: 100%;
-    padding: 18px 25px;
-    border-radius: 4px; /* Rechtstreeks zoals je homepage knoppen */
-    border: 1px solid #ddd;
-    font-size: 1rem;
-    background-color: var(--white);
-    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
-}
-
-.search-bar input:focus {
-    outline: none;
-    border-color: var(--gold-accent);
-}
-
-.filters {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin-bottom: 50px;
-}
-
-/* De dropdowns lijken nu op de secundaire knoppen van je homepage */
-.filters select {
-    padding: 12px 20px;
-    border-radius: 4px;
-    border: 2px solid var(--gold-accent);
+#Title_Homepage h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
     color: var(--navy-deep);
-    background-color: transparent;
-    font-weight: 600;
-    cursor: pointer;
-    flex-grow: 1;
-    max-width: 300px;
+    margin-bottom: 15px;
 }
 
-/* De zoek/filter knoppen */
-button[type="submit"] {
-    background-color: var(--navy-deep);
-    color: var(--white);
-    border: none;
-    padding: 12px 30px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: all 0.4s ease;
+#Title_Homepage h5 {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: var(--text-main);
+    text-transform: uppercase;
+    letter-spacing: 3px;
 }
 
-button[type="submit"]:hover {
-    background-color: var(--gold-accent);
-    transform: translateY(-3px);
-}
-
-/* --- 5. BOEKEN GRID & KAARTEN --- */
-.boeken-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 30px;
+/* BUTTONS SECTION */
+.Homepage {
     width: 90%;
-    max-width: var(--container-width);
-    margin: 0 auto 80px auto;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
-.boek {
-    background-color: var(--white);
-    padding: 20px;
-    border-radius: 8px; /* Matcht met .Bottom_text van je home */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
-    border-top: 4px solid var(--gold-accent); /* Zelfde accent als je stats blokken */
+#Knoppen_Homepage {
     display: flex;
     flex-direction: column;
-    transition: all 0.4s ease;
+    align-items: center;
+    gap: 40px;
 }
 
-.boek:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-}
-
-.boek img {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 4px;
-    margin-bottom: 15px;
-}
-
-.boek h2 {
-    font-family: 'Playfair Display', serif;
-    color: var(--navy-deep);
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.boek p {
-    font-size: 0.95rem;
-    color: var(--text-main);
-    margin-bottom: 15px;
-}
-
-/* --- 6. CATEGORIE TABS --- */
-.tabs-cont {
+#Knopjes_titel {
     display: flex;
-    gap: 10px;
-    margin-top: auto;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-.small-tabs {
-    font-size: 0.75rem;
+button {
+    background-color: var(--navy-deep);
+    color: var(--white);
+    border: 2px solid var(--navy-deep);
+    padding: 18px 35px;
+    font-size: 1rem;
     font-weight: 600;
-    background-color: var(--bg-paper);
-    color: var(--navy-deep);
-    padding: 5px 12px;
     border-radius: 4px;
-    border: 1px solid var(--gold-accent);
-    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    min-width: 220px;
 }
 
-/* --- 7. RESPONSIVE --- */
+
+button:nth-child(2) {
+    background-color: transparent;
+    color: var(--navy-deep);
+    border: 2px solid var(--gold-accent);
+}
+
+button:hover {
+    background-color: var(--gold-accent);
+    border-color: var(--gold-accent);
+    color: var(--white);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* STATS SECTION */
+#Bottom_text {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 80px;
+    padding-bottom: 50px;
+}
+
+.Bottom_text {
+    background-color: var(--white);
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    border-top: 3px solid var(--gold-accent);
+    text-align: center;
+}
+
+.Bottom_text p {
+    font-weight: 600;
+    color: var(--navy-deep);
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-    header { padding: 1rem 5%; }
-    .filters { flex-direction: column; }
-    .filters select { max-width: 100%; }
+    #Title_Homepage h1 { font-size: 2.2rem; }
+    #Knopjes_titel { flex-direction: column; width: 100%; }
+    button { width: 100%; }
 }
