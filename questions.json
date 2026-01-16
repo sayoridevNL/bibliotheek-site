@@ -4,16 +4,16 @@
       "question": "What genre calls to you?",
       "subtitle": "Choose the world you want to explore",
       "options": [
-        { "icon": "📖", "label": "Fiction", "value": "fiction" },
-        { "icon": "📚", "label": "Non-Fiction", "value": "nonfiction" },
-        { "icon": "👻", "label": "Horror", "value": "horror" },
-        { "icon": "🎨", "label": "Graphic Novels", "value": "graphicnovel" },
-        { "icon": "🕵️‍♂️", "label": "Mystery", "value": "mystery" },
-        { "icon": "❤️", "label": "Romance", "value": "romance" },
-        { "icon": "😂", "label": "Comedy", "value": "comedy" },
-        { "icon": "🪶", "label": "Poetry", "value": "poetry" },
-        { "icon": "🐉", "label": "Fantasty", "value": "fantasy" },
-        { "icon": "🚀", "label": "Science Fiction", "value": "sciencefiction" }
+        { "icon": "📖", "label": "Fiction", "value": "Fiction" },
+        { "icon": "📚", "label": "Non-Fiction", "value": "Nonfiction" },
+        { "icon": "👻", "label": "Horror", "value": "Horror" },
+        { "icon": "🎨", "label": "Graphic Novels", "value": "Graphicnovel" },
+        { "icon": "🕵️‍♂️", "label": "Mystery", "value": "Mystery" },
+        { "icon": "❤️", "label": "Romance", "value": "Romance" },
+        { "icon": "😂", "label": "Comedy", "value": "Comedy" },
+        { "icon": "🪶", "label": "Poetry", "value": "Poetry" },
+        { "icon": "🐉", "label": "Fantasty", "value": "Fantasy" },
+        { "icon": "🚀", "label": "Science Fiction", "value": "Sciencefiction" }
 
       ]
     },
@@ -42,44 +42,18 @@
       "question": "What theme interests you?",
       "subtitle": "Choose something that resonates with you",
       "options": [
-        { "icon": "🗺️", "label": "Adventure", "value": "adventure" },
-        { "icon": "🤝", "label": "Friendship", "value": "friendship" },
-        { "icon": "❤️", "label": "Love", "value": "love" },
-        { "icon": "🤔", "label": "Philosophy", "value": "philosophy" },
-        { "icon": "👨‍👩‍👧‍👦", "label": "Family", "value": "family" },
-        { "icon": "🔬", "label": "Science", "value": "science" },
-        { "icon": "🌱", "label": "Self-improvement", "value": "selfimprovement" },
-        { "icon": "😄", "label": "Humor", "value": "humor" },
-        { "icon": "🕵️", "label": "Mystery", "value": "mystery" },
-        { "icon": "🎭", "label": "Tragedy", "value": "tragedy" }
+        { "icon": "🗺️", "label": "Adventure", "value": "Adventure" },
+        { "icon": "🤝", "label": "Friendship", "value": "Friendship" },
+        { "icon": "❤️", "label": "Love", "value": "Love" },
+        { "icon": "🤔", "label": "Philosophy", "value": "Philosophy" },
+        { "icon": "👨‍👩‍👧‍👦", "label": "Family", "value": "Family" },
+        { "icon": "🔬", "label": "Science", "value": "Science" },
+        { "icon": "🌱", "label": "Self-improvement", "value": "Selfimprovement" },
+        { "icon": "😄", "label": "Humor", "value": "Humor" },
+        { "icon": "🕵️", "label": "Mystery", "value": "Mystery" },
+        { "icon": "🎭", "label": "Tragedy", "value": "Tragedy" }
       ]
 
     }
-  ],
-  "books": {
-    "fiction": {
-      "title": "The Great Gatsby",
-      "author": "F. Scott Fitzgerald",
-      "desc": "A classic tale of the Jazz Age, exploring themes of decadence and idealism.",
-      "color": "linear-gradient(135deg, #f6d365 0%, #fda085 100%)"
-    },
-    "nonfiction": {
-      "title": "Sapiens",
-      "author": "Yuval Noah Harari",
-      "desc": "A brief history of humankind, exploring how biology and history define us.",
-      "color": "linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%)"
-    },
-    "scifi": {
-      "title": "Dune",
-      "author": "Frank Herbert",
-      "desc": "An epic science fiction saga set on the desert planet Arrakis.",
-      "color": "linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%)"
-    },
-    "mystery": {
-      "title": "The Silent Patient",
-      "author": "Alex Michaelides",
-      "desc": "A shocking psychological thriller about a woman's act of violence against her husband.",
-      "color": "linear-gradient(135deg, #cfd9df 0%, #e2ebf0 100%)"
-    }
-  }
+  ]
 }
