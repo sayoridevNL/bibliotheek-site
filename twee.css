@@ -319,9 +319,9 @@ footer, .footer-center {
 }
 
 @media (max-width: 768px) {
-    /* Responsive adjustment for Home Button */
+    
     .home-btn {
-        position: relative; /* Put it back in normal flow on mobile */
+        position: relative; 
         top: auto;
         left: auto;
         margin-bottom: 10px;

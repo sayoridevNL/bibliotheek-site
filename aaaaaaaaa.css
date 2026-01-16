@@ -10,7 +10,7 @@
     --white: #ffffff;
     --gray-border: #e0e0e0;
     
-    /* NEW: Centralize width to keep things consistent */
+   
     --container-width: 1400px; 
 }
 
@@ -24,13 +24,13 @@ body {
     background-color: var(--bg-paper);
     color: var(--text-main);
     font-family: 'Poppins', sans-serif;
-    padding: 20px; /* Reduced from 40px to save edge space */
+    padding: 20px; 
     line-height: 1.6;
     min-height: 100vh;
 }
 
 /* --- UTILITY CLASS FOR ALIGNMENT --- */
-/* Add this class to your Header, Search, Filters, and Grid in HTML */
+
 .container-width {
     max-width: var(--container-width);
     margin-left: auto;
@@ -43,15 +43,15 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 25px; /* Reduced from 40px */
+    margin-bottom: 25px; 
     
-    /* Inherit width control */
+  
     max-width: var(--container-width);
     margin-left: auto;
     margin-right: auto;
     
     border-bottom: 3px solid var(--gold-accent);
-    padding-bottom: 15px; /* Slightly tighter */
+    padding-bottom: 15px; 
 }
 
 header h1 {
@@ -84,7 +84,7 @@ header .home-btn:hover {
 
 /* --- SEARCH BAR --- */
 .search-bar {
-    margin-bottom: 20px; /* Reduced from 30px */
+    margin-bottom: 20px; 
     max-width: var(--container-width);
     margin-left: auto;
     margin-right: auto;
@@ -117,8 +117,8 @@ header .home-btn:hover {
 /* --- FILTERS --- */
 .filters {
     display: flex;
-    gap: 15px; /* Tighter gap */
-    margin-bottom: 30px; /* Reduced from 40px */
+    gap: 15px; 
+    margin-bottom: 30px; 
     max-width: var(--container-width);
     margin-left: auto;
     margin-right: auto;
@@ -136,9 +136,9 @@ header .home-btn:hover {
     cursor: pointer;
     transition: all 0.3s ease;
     
-    /* Allow filters to grow and fill empty space if needed */
+   
     flex-grow: 1; 
-    max-width: 300px; /* But prevent them from getting huge */
+    max-width: 300px; 
     min-width: 180px;
 }
 
@@ -158,13 +158,8 @@ header .home-btn:hover {
     max-width: var(--container-width);
     margin: 0 auto;
     display: grid;
-    
-    /* Adjusted minmax: 
-       240px ensures cards aren't too skinny. 
-       1fr ensures they expand to fill the empty space on the right. */
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    
-    gap: 20px; /* Reduced gap from 30px for a fuller look */
+    gap: 20px; 
 }
 
 /* --- RESPONSIVE --- */
@@ -188,6 +183,6 @@ header .home-btn:hover {
 
     .filters select {
         width: 100%;
-        max-width: 100%; /* Remove constraint on mobile */
+        max-width: 100%; 
     }
 }
