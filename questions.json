@@ -42,6 +42,44 @@
       "question": "What theme interests you?",
       "subtitle": "Choose something that resonates with you",
       "options": [
+        { "icon": "🗺️", "label": "Adventure", "value": "adventure" },
+        { "icon": "🤝", "label": "Friendship", "value": "friendship" },
+        { "icon": "❤️", "label": "Love", "value": "love" },
+        { "icon": "🤔", "label": "Philosophy", "value": "philosophy" },
+        { "icon": "👨‍👩‍👧‍👦", "label": "Family", "value": "family" },
+        { "icon": "🔬", "label": "Science", "value": "science" },
+        { "icon": "🌱", "label": "Self-improvement", "value": "selfimprovement" },
+        { "icon": "😄", "label": "Humor", "value": "humor" },
+        { "icon": "🕵️", "label": "Mystery", "value": "mystery" },
+        { "icon": "🎭", "label": "Tragedy", "value": "tragedy" }
+      ]
+
+    }
+  ],
+  "books": {
+    "fiction": {
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "desc": "A classic tale of the Jazz Age, exploring themes of decadence and idealism.",
+      "color": "linear-gradient(135deg, #f6d365 0%, #fda085 100%)"
+    },
+    "nonfiction": {
+      "title": "Sapiens",
+      "author": "Yuval Noah Harari",
+      "desc": "A brief history of humankind, exploring how biology and history define us.",
+      "color": "linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%)"
+      "options": [
+        { "icon": "🧒", "label": "Kids (5-12 Years)", "value": "kids" },
+        { "icon": "🧑‍🎓", "label": "Teens (13-17 Years)", "value": "teens" },
+        { "icon": "🧑", "label": "Young Adults (18-25 Years)", "value": "youngadults" },
+        { "icon": "🧔", "label": "Adults (25+ Years)", "value": "adults" }
+
+      ]
+    },
+    {
+      "question": "What theme interests you?",
+      "subtitle": "Choose something that resonates with you",
+      "options": [
         { "icon": "🗺️", "label": "Adventure", "value": "Adventure" },
         { "icon": "🤝", "label": "Friendship", "value": "Friendship" },
         { "icon": "❤️", "label": "Love", "value": "Love" },
