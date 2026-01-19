@@ -13,6 +13,7 @@ try {
 }
 
 $boek = null;
+$uitgeleend = null;
 if (isset($_GET['id'])) {
     // gets id from book that's been clicked
     $id = intval($_GET['id']);
@@ -271,7 +272,6 @@ if (isset($_POST['lenen-func'])) { // when 'borrow/leen' btn is clicked
         </div>
     </div>
 
-    <div id="loanModal" class="modal-overlay">
     <div class="modal-content">
         <h3 id="loanTitle">Rent this book</h3>
 
