@@ -236,6 +236,33 @@ h1 {
     border-color: var(--gold-accent);
 }
 
+/* FORM LOGIC */
+form{
+    display: flex;
+    flex-direction: column;
+}
+        
+input{
+    height: 35px;
+    padding: 5px;
+    width: 170px;
+    border: 1px solid var(--navy-deep);
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.leen-button{
+    margin-top: 10px;
+    background-color: var(--navy-deep);
+    color: white;
+    border-radius: 5px;
+    border: var(--navy-deep);
+    height: 50px;
+}
+#successMsg{
+    z-index: -1;
+    transition: 0.3 ease-in-out;
+}
+
 /* Modal Overlay */
 .modal-overlay {
     display: none;
