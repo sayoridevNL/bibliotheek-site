@@ -22,7 +22,7 @@ try {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boeken</title>
-    <link rel="stylesheet" href="css/broek.css">
+    <link rel="stylesheet" href="css/boek.css">
 </head>
 <body>
   <?php
