@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>De boek Quiz.</title>
+    <title>BookFinder Quiz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/quiz.css">
 </head>
 <body>
 
-    <button onclick="location.href='home.html'" class="home-btn">Home</button>
+    <button onclick="location.href='index.html'" class="home-btn">Home</button>
 
     <div class="quiz-container">
         
@@ -16,50 +17,28 @@
             <div class="logo">
                 <span class="book-icon">📖</span> BookFinder
             </div>
-            <div class="step-indicator" id="stepIndicator">Question 1 of 3</div>
+            <div class="step-indicator" id="stepIndicator">Question 1 of 4</div>
         </header>
 
-        <div class="progress-track" id="progressTrack">
-            <div class="progress-fill" id="progressBar" style="width: 33%;"></div>
+        <div class="progress-track">
+            <div class="progress-fill" id="progressBar" style="width: 25%;"></div>
         </div>
 
         <main id="quizContent">
-            <h1 id="questionText">Loading...</h1>
-            <p class="subtitle" id="subtitleText">Loading...</p>
+            <h1 id="questionText">Loading Question...</h1>
+            <p class="subtitle" id="subtitleText">Please wait while we set things up.</p>
 
             <div class="options-grid" id="optionsGrid">
                 </div>
         </main>
 
-        <div id="resultScreen" class="hidden">
-            <h1 id="resultTitle">Your Perfect Match</h1>
-            <p class="subtitle">Based on your choices, we recommend:</p>
-            
-            <div class="book-card">
-                <div class="book-cover" id="bookCover">📚</div>
-                
-                <div class="book-details">
-                    <h2 id="bookTitle">Book Title</h2>
-                    <p class="author" id="bookAuthor">by Author Name</p>
-                    <p class="description" id="bookDescription">
-                        This is a short description of the book. It matches your mood and genre preferences perfectly.
-                    </p>
-                    <button class="btn-buy">Get this Book</button>
-                </div>
-            </div>
-        </div>
-
         <footer id="quizFooter">
             <button class="btn-back" id="backBtn">← Back</button>
-            <button class="btn-next" id="nextBtn" >Next →</button>
+            <button class="btn-next" id="nextBtn" disabled>Next →</button>
         </footer>
-
-        <div class="footer-center hidden" id="restartContainer">
-            <button class="btn-restart" id="restartBtn">Start Over ↻</button>
-        </div>
 
     </div>
 
     <script src="js/quiz.js"></script>
 </body>
-</html> 
+</html>
